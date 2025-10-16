@@ -1,16 +1,12 @@
+limite_peso = 50
+multa_kg = 4.00
 
+peso_pescado = float(input("quantos kg de peixe você pescou?"))
 
-peso = int(input("digite o totl de peixes:"))
+if peso_pescado > limite_peso:
+    excedente = peso_pescado - limite_peso
+    valor_multa = excedente * multa_kg
 
-peso_limite = 50
-multa = 4
-execesso= 0
-
-resultado = peso - peso_limite + execesso
-
-print("você tem ",resultado,"em quilos")
-
-
-
-
-
+    print(f"O excedente é {excedente}kg o valor da multa é R${valor_multa}")
+else:
+    print(f"Não excedeu o limite de {limite_peso}kg")
